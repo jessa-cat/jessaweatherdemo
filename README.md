@@ -2,7 +2,7 @@
 
 When running locally, first run `rails dev:cache` to enable caching.
 
-Caveats and considerations:
+Notes:
 * Accepts an address, or address fragment, as input.  Since weather data is pulled by zip code, that’s the minimum input needed for a result.
 * Because the caching requirement is to key by zip code, I interpreted this to mean that only addresses in the USA will be supported.  Users will see an error if they try a non-US address
 * Expanding support to other countries would require something like `country/postal_code`, or adopting a [global grid scheme](https://en.wikipedia.org/wiki/Discrete_global_grid).
