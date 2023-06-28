@@ -38,7 +38,7 @@ class WeatherReportController < ApplicationController
 
 	# get a safe zip code from the GET param
 	def get_zip
-		# This is a barebones amount of validation to ensure we don't allow malicious
+		# This is a barebones/naive amount of validation to ensure we don't allow malicious
 		# users to send the weather API unreasonably large data using our API key.
 		# We're still relying upon the API to validate its own input beyond that.
 		params[:zipcode].truncate 10, omission: ''

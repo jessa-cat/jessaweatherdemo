@@ -1,6 +1,6 @@
 <h1>Weather for <%= @conditions.name %> <%= @zipcode %></h1>
 
-Currently <%= @conditions.main.temp %>&deg;, feels like <%= @conditions.main.feels_like %>&deg;<br/>
+<div id="currtemp">Currently <%= @conditions.main.temp %>&deg;, feels like <%= @conditions.main.feels_like %>&deg;</div>
 Humidity <%= @conditions.main.humidity %>%<br/>
 Wind Speed <%= @conditions.wind.speed %>mph<br/>
 Today's low <%= @conditions.main.temp_min %>&deg;<br/>
