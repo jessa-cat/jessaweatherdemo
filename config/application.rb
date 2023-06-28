@@ -19,7 +19,7 @@ module Jessaweatherdemo
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
     OpenWeather::Client.configure do |config|
-      config.api_key = "03dd5afc8172e08b36aeded41f64eb4a"
+      config.api_key = "03dd5afc8172e08b36aeded41f64eb4a" # Bad!! API keys, secrets, etc, should be injected from the env.  That's beyond this demo's scope
       config.user_agent = "OpenWeather Ruby Client/1.0"
       config.units = "imperial"
     end
