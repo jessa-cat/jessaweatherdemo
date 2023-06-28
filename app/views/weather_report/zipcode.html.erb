@@ -1,1 +1,17 @@
-report for <%= @zipcode %>
+<h1>Weather for <%= @conditions.name %> <%= @zipcode %></h1>
+
+Currently <%= @conditions.main.temp %>&deg;, feels like <%= @conditions.main.feels_like %>&deg;<br/>
+Humidity <%= @conditions.main.humidity %>%<br/>
+Wind Speed <%= @conditions.wind.speed %>mph<br/>
+Today's low <%= @conditions.main.temp_min %>&deg;<br/>
+Today's high <%= @conditions.main.temp_max %>&deg;<br/>
+
+<p>Last updated from weather station <%= @conditions.dt.localtime(@conditions.timezone) %>*</p>
+
+<i>
+<% if @cached %>
+	*results pulled from cache
+<% else %>
+	*live results
+<% end %>
+</i>
