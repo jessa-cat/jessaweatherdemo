@@ -1,0 +1,6 @@
+hi!
+<%= form_with url: "/weather_report/address", method: :post do |form| %>
+  <%= form.label :address, "Search for:" %>
+  <%= form.text_field :address %>
+  <%= form.submit "Search" %>
+<% end %>
